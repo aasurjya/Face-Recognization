@@ -34,6 +34,9 @@ for encoding in encodings:
     # otherwise, we get the name with the highest number of matches
     else:
         name = max(counts, key=counts.get)
+        '''words = ["apple", "banana", "cherry", "date"]
+            largest_word = max(words, key=len)
+                print(largest_word)'''
 
     # add the name to the list of names
     names.append(name)
