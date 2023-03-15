@@ -25,10 +25,11 @@ for image_path in image_paths:
     encodings = face_encodings(image)
     # get the name from the image path
     name = image_path.split(os.path.sep)[-2]
+    '''[-2] retrieves the second-to-last item in the list. In the example above, it retrieves the string "person1". This is because we assume that the directory structure is as follows: root_dir/person_name/image.jpg. So, the second-to-last item in the list will always be the name of the person.'''
     # get the encodings for the current name
     e = name_encondings_dict.get(name, [])
     # update the list of encodings for the current name
-    e.extend(encodings)
+    e.extend(encodings) #e+encoding
     # update the list of encodings for the current name
     name_encondings_dict[name] = e
     nb_current_image += 1
@@ -36,3 +37,5 @@ for image_path in image_paths:
 # save the name encodings dictionary to disk
 with open("encodings.pickle", "wb") as f:
     pickle.dump(name_encondings_dict, f)
+
+    '''pickle is a Python module that is used for serializing and de-serializing Python objects. It is used to convert a Python object hierarchy into a byte stream that can be stored in a file, database or transmitted over a network. The pickle.dump() method serializes the Python object name_encondings_dict into a byte stream and writes it to a file named "encodings.pickle" in binary mode (hence the "wb" mode).'''
