@@ -11,7 +11,7 @@ with open("encodings.pickle", "rb") as f:
     name_encodings_dict = pickle.load(f)
 
 # load the input image
-image = cv2.imread("examples/14.png")
+image = cv2.imread("examples/me.jpg")
 # get the 128-d face embeddings for each face in the input image
 encodings = face_encodings(image)
 # this list will contain the names of each face detected in the image
