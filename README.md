@@ -15,6 +15,6 @@ I   Image processed 6/7
     Image processed 7/7
 3. Run face_recognition_video.py to detect face in video.
 
-( Put your child images infront webcam, it can also be detected) 
+( Put your childhood images infront webcam, it can also be detected as provided name) 
 
 4. For images you have to add your imagest to examples folder and give input that path images in  face_recognition_images.py and Run.
